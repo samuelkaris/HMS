@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css" type="text/css">
+    <title>Home</title>
+</head>
+<body>
+  
+    <h2 id="hotelname">A.C.E</h2>
+    <center><h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 50px;  " ><center>ACE HOTELS</center></h1>
+    <br>
+    <br>
+    <div class="topnav" >
+        <a class="active" href="index.html">Home</a>
+        <a href="bookings.html">Rooms</a>
+        <a href="Casino-page.html">Casino</a>
+        <a href="location.html">Location</a>
+        <a href="event.html">Events</a>
+        <a href="restaurants.html">Restaurants</a>
+
+
+        <a href="signup.html" style="float: right; color: black;" class="active">SIGN UP</a>
+        <p style="float: right; color: black;">|</p>
+        <a href="login.html" style="float: right; color: black;" class="active">LOGIN</a>
+        
+      </div> 
+        
+
+     <br><br><br>   
+        
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="mains.jpg" style="max-width: 100%; max-height: 100%;" height="562px">
+</div>
+
+<div class="mySlides fade">
+  <img src="outside.jpg" style="max-width: 100%; max-height: 100%;" height="550px">
+</div>
+
+<div class="mySlides fade">
+  <img src="snippet.jpg" style="max-width: 100%; max-height: 100%;" height="550px">
+</div>
+
+<div class="mySlides fade">
+    <img src="pool.jpg" style="width: 1000px; max-width: 100%; max-height: 100%;" height="550px" >
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); 
+}
+</script>
+<br>
+<br> <br> <br>
+
+
+
+
+
+
+<br>
+<br>
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<h1><center>Our spectacular world-class casino</center></h1>
+<p><center>An unforgettable experience that would <br>keep you on the edge of your seat <br>while having the best time of your life</center></p>
+<br> 
+<center><hr></center>
+<br> <br> <br>
+</div>
+<div style="background-blend-mode: hue;">
+  <center><img src="gambling-roulette-wheel-wallpaper-preview.jpg" width="850px" height="500px"></center>
+  <br> <br> <br>
+  <!--<center><button class="button">READ ABOUT CASINO</button></center> -->
+  <div class="topnav"><center><a href="Casino-page.html" class="active" style="margin-left: 538px; color: black; letter-spacing: 1.5px;"><b>READ ABOUT CASINO</b></a></center></div>
+</div>
+<br> <br><br><br><br><br>
+
+
+
+
+
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <h1><center>Our Rooms</center></h1>
+  <p><center>Now you can experience true luxury<br>at an affordable price. <br>Relax and enjoy!</center></p>
+  <br> 
+  <center><hr></center>
+  <br> <br> <br>
+<div class="slideshow-container fade">
+
+  <div class="Containers">
+    <img src="guest-suite.jpg" width="850px" height="500px">
+    <div class="Info">Guest Suite</div>
+  </div>
+
+  <div class="Containers">
+    <img src="single-room.jpg" width="850px" height="500px">
+    <div class="Info">Single Room</div>
+  </div>
+
+  <div class="Containers">
+    <img src="double-room.jpg" width="850px" height="500px">
+    <div class="Info">Double Room</div>
+  </div>
+
+  <div class="Containers">
+    <img src="king-room.jfif" width="850px" height="500px">
+    <div class="Info">King Room</div>
+  </div>
+
+  <div class="Containers">
+    <img src="executive-room.jpg" width="850px" height="500px">
+    <div class="Info">Executive Suite</div>
+  </div>
+
+  <div class="Containers">
+    <img src="presidential-suite.jpg" width="850px" height="500px">
+    <div class="Info">Presidential Suite</div>
+  </div>
+
+  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The circles/dots -->
+<div style="text-align:center">
+  <span class="dots" onclick="currentSlide(1)"></span>
+  <span class="dots" onclick="currentSlide(2)"></span>
+  <span class="dots" onclick="currentSlide(3)"></span>
+  <span class="dots" onclick="currentSlide(4)"></span>
+  <span class="dots" onclick="currentSlide(5)"></span>
+  <span class="dots" onclick="currentSlide(6)"></span>
+</div> 
+<script>
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+// forward/Back controls
+function plusSlides(n) {
+SlideShow(slidePosition += n);
+}
+
+//  images controls
+function currentSlide(n) {
+SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+var i;
+var slides = document.getElementsByClassName("Containers");
+var circles = document.getElementsByClassName("dots");
+if (n > slides.length) {slidePosition = 1}
+if (n < 1) {slidePosition = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < circles.length; i++) {
+circles[i].className = circles[i].className.replace(" enable", "");
+}
+slides[slidePosition-1].style.display = "block";
+circles[slidePosition-1].className += " enable";
+} 
+</script>
+<br> <br> <br>
+ <!-- <center><button class="button">BOOK A ROOM</button></center> -->
+  <div class="topnav"><center><a href="bookings.html" class="active" style="margin-left: 583px; color: black; letter-spacing: 1.5px;"><b>BOOK A ROOM</b></a></center></div>
+
+
+
+
+
+
+<br><br><br><br><br><br>
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<h1><center>Our Event Centers</center></h1>
+<p><center>The event centers that can seat 5000 people.<br>Encounter liveliness with our top notch sound system <br>while you seat back and enjoy the show</center></p>
+<br> 
+<center><hr></center>
+<br> <br> <br>
+</div>
+<div style="background-blend-mode: hue;">
+  <center><img src="photo-1519167758481-83f550bb49b3.jfif" style="width: 1000px; max-height: 100%;" height="550px"></center>
+  <br> <br> <br>
+  <div class="topnav"><center><a href="event.html" class="active" style="margin-left: 513px; color: black; letter-spacing: 1.5px;"><b>READ ABOUT EVENT CENTER</b></a></center></div>
+</div>
+<br><br><br><br><br><br>
+
+
+
+
+
+
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <h1><center>Our Restaurants</center></h1>
+  <p><center>Restaurants in diverse cultures are avaibale.<br>Eat and taste the enriching goodness. <br>Discounts apply to hotel guests!</center></p>
+  <br> 
+  <center><hr></center>
+  <br> <br> <br>
+
+
+<div class="roww">
+  <div class="columnn">
+    <div class="containerr">
+      <img src="african food.jpg" alt="african food" class="imagee">
+      <div class="overlayy">
+        <div class="textt">
+          <h3>Mama's Recipe</h3>
+          <p>African dishes to expand your pallete <br> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="columnn">
+    <div class="containerr">
+      <img src="fast food.jpg" alt="african food" class="imagee">
+      <div class="overlayy">
+        <div class="textt">
+          <h3>Wrap & Go</h3>
+          <p>Universally known for their exceptional fast food. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="roww">
+  <div class="columnn">
+    <div class="containerr">
+      <img src="tgi-fridays-potato-skins-1576689702.jpg" alt="african food" class="imagee">
+      <div class="overlayy">
+        <div class="textt">
+          <h3>Dhaba</h3>
+          <p>Taste the rich culture of the Indians </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="columnn">
+    <div class="containerr">
+      <img src="christmas-side-dishes-kale-salad-1636730167.jpg" alt="african food" class="imagee">
+      <div class="overlayy">
+        <div class="textt">
+          <h3>Fancy Radish</h3>
+          <p>Go vegan! <br>Fresh vegetables and sauces to get you going </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<div class="topnav"><center><a href="restaurants.html" class="active" style="margin-left: 530px; color: black; letter-spacing: 1.5px;"><b>READ ABOUT RESTAURANTS</b></a></center></div>
+
+
+
+
+</div>
+</div>
+
+    </center>
+<br><br><br><br><br>
+<div style="background-color: #212529; height: 420px; width: 100%;">
+  <br> <br>
+  <hr style="width: 100%; color: #7c6f55; background-color: #7c6f55;"> 
+  <br><br><br>
+
+  <div>
+    <div style="margin-left: 130px; float: left;">
+      <h4>HOW CAN WE ASSIST YOU? <br>+(234) 701-193 3338 </h4>
+      <p>Call us now.</p>
+    </div>
+    <div>
+      <p style="margin-left: 700px; font-family: jumeirah-font2,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1.6; letter-spacing: 1.5px;">
+        PRIVACY POLICY <br><br> TERMS & CONDITIONS <br><br> COOKIES POLICY <br><br> FAQs <br><br> CARRERS <br><br> PRESS CENTER
+      </p>
+    </div>
+    <div style="margin-left: 1050px; font-family: jumeirah-font2,Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.6; letter-spacing: 1.5px; margin-top: 30px;">
+        <p>© COPYRIGHT A.C.E INTERNATIONAL LLC 2022</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

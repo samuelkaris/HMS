@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+ 
+html,
+body {
+  font-family: Verdana, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.checkout-panel {
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  height: 766px;
+  background-color: #7c6f55;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}
+ 
+.title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.payment-method {
+justify-content: center;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+ 
+.method {
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+  height: 122px;
+  padding-top: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #7c6f55;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.card-logos {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.radio-input {
+  margin-top: 20px;
+}
+ 
+input[type='radio'] {
+  display: inline-block;
+}
+
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.input-fields label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+ 
+.info {
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  margin-top: 50px;
+  opacity: .5;
+  color: #000;
+}
+ 
+div[class*='column'] {
+  width: 382px;
+}
+ 
+input[type='text'],
+input[type='password'] {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  padding-right: 40px;
+  padding-left: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 4px;
+  outline: none;
+}
+ 
+input[type='text']:focus,
+input[type='password']:focus {
+  border-color: rgb(119, 219, 119);
+}
+ 
+
+.small-inputs {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+ 
+.small-inputs div {
+  width: 182px;
+}
+
+.panel-footer {
+  display: flex;
+  width: 100%;
+  height: 96px;
+  padding: 0 80px;
+  background-color: rgb(239, 239, 239);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+ 
+.back-btn {
+  color: #000;
+  background: #7c6f55;
+}
+ 
+.next-btn {
+  color: #7c6f55;
+  background: #000;
+}
+ 
+.btn:focus {
+  outline: none;
+}
+ 
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.blue-border {
+  border: 1px solid rgb(110, 178, 251);
+}
+
+.warning {
+  border-color: #f62f5e;
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+        }
+  
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;        
+        }
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+        }
+    </style>
+</head>
+<body>
+  <h2 id="hotelname">A.C.E</h2>
+    <center>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 50px;  " ><center>ACE HOTELS</center></h1>
+    <br>
+    <br>
+    <div class="topnav" >
+        <a href="index.html">Home</a>
+        <a href="bookings.html">Rooms</a>
+        <a href="Casino-page.html">Casino</a>
+        <a href="location.html">Location</a>
+        <a href="event.html">Events</a>
+        <a href="restaurants.html">Restaurants</a>
+    </div>
+
+      <br><br><br>
+    <div class="checkout-panel">
+        <div class="panel-body">
+          <h2 class="title">Payment Form</h2>
+       
+          <div class="progress-bar">
+            <div class="step active"></div>
+            <div class="step active"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+          </div>
+       
+          <div class="payment-method">
+            <label for="card" class="method card">
+              <div class="card-logos">
+                <img src="visa.png" width="950px" height="50px">
+              </div>
+       
+              <h3>
+                Pay with credit card
+              </h3>
+                
+             
+            </label>
+       
+
+          </div>
+       
+          <div class="input-fields">
+            <div class="column-1">
+              <label for="cardholder">Cardholder's Name</label>
+              <input type="text" id="cardholder" />
+       
+              <div class="small-inputs">
+                <div>
+                  <label for="date">Valid thru</label>
+                  <input type="text" id="date" placeholder="MM / YY" />
+                </div>
+       
+                <div>
+                  <label for="verification">CVV / CVC *</label>
+                  <input type="password" id="verification"/>
+                </div>
+              </div>
+       
+            </div>
+            <div class="column-2">
+              <label for="cardnumber">Card Number</label>
+              <input type="password" id="cardnumber"/>
+       
+              <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+            </div>
+          </div>
+        </div>
+       
+        <div class="panel-footer">
+          <a href="booking-form.html"><button class="btn back-btn">Back</button></a>
+          <button class="btn next-btn">Pay Now</button>
+        </div>
+      </div>
+      <script>
+          $(document).ready(function() {
+ 
+ $('.method').on('click', function() {
+   $('.method').removeClass('blue-border');
+   $(this).addClass('blue-border');
+ });
+
+})
+
+var $cardInput = $('.input-fields input');
+ 
+$('.next-btn').on('click', function(e) {
+ 
+  $cardInput.removeClass('warning');
+ 
+  $cardInput.each(function() {    
+     var $this = $(this);
+     if (!$this.val()) {
+       $this.addClass('warning');
+     }
+  })
+});
+      </script>
+
+</center>
+<br><br><br><br><br>
+    <div style="background-color: #212529; height: 420px; width: 100%;">
+        <br> <br>
+        <hr style="width: 100%; color: #7c6f55; background-color: #7c6f55;"> 
+        <br><br><br>
+
+        <div>
+            <div style="margin-left: 130px; float: left;">
+                <h4>HOW CAN WE ASSIST YOU? <br>+(234) 701-193 3338 </h4>
+                <p>Call us now.</p>
+            </div>
+        <div>
+        <p style="margin-left: 700px; font-family: jumeirah-font2,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1.6; letter-spacing: 1.5px;">
+            PRIVACY POLICY <br><br> TERMS & CONDITIONS <br><br> COOKIES POLICY <br><br> FAQs <br><br> CARRERS <br><br> PRESS CENTER
+        </p>
+    </div>
+    <div style="margin-left: 1050px; font-family: jumeirah-font2,Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.6; letter-spacing: 1.5px; margin-top: 30px;">
+        <p>© COPYRIGHT A.C.E INTERNATIONAL LLC 2022</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
